@@ -1,5 +1,5 @@
 import { json } from '@sveltejs/kit';
-import type { RequestHandler } from './$types';
+import type { RequestHandler } from './$types.js';
 import { readdir } from 'fs/promises';
 import { join } from 'path';
 import { stat } from 'fs/promises';

@@ -1,4 +1,4 @@
-import type { RequestHandler } from './$types';
+import type { RequestHandler } from './$types.js';
 import { readFile } from 'fs/promises';
 import { join } from 'path';
 import { existsSync } from 'fs';
@@ -6,7 +6,7 @@ import { existsSync } from 'fs';
 // Upload directory
 const UPLOAD_DIR = join(process.cwd(), 'uploads');
 
-export const GET: RequestHandler = async ({ params }) => {
+export const GET: RequestHandler = async ({ params }: { params: { filename: string } }) => {
 	try {
 		const { filename } = params;
 		
